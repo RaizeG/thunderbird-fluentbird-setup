@@ -1,0 +1,21 @@
+/* CUSTOM CSS - PLACE YOUR CUSTOM OVERRIDES BELOW */
+
+/* Remove harsh Win95-style borders around mail cards */
+#threadTree[rows="thread-card"],
+#threadTree[rows="thread-card"] .card-layout {
+	--tree-card-border: transparent !important;
+	--tree-card-border-selected: transparent !important;
+	--tree-card-border-hover: transparent !important;
+	--tree-card-border-current: transparent !important;
+}
+
+#threadTree[rows="thread-card"] [is="tree-view-table-body"] .card-layout .card-container,
+#threadTree[rows="thread-card"] [is="tree-view-table-body"] .card-layout.selected .card-container,
+#threadTree[rows="thread-card"] [is="tree-view-table-body"] .card-layout.selected.current .card-container,
+#threadTree[rows="thread-card"]:not(:focus, :focus-within) [is="tree-view-table-body"] .card-layout.selected.current .card-container,
+#threadTree[rows="thread-card"]:not(:focus, :focus-within) [is="tree-view-table-body"] .card-layout[data-properties~="junk"].selected.current .card-container {
+	border: 1px solid transparent !important;
+	border-color: transparent !important;
+	outline: none !important;
+	border-radius: 6px !important;
+}
